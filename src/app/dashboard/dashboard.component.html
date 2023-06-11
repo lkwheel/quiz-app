@@ -1,0 +1,9 @@
+<h2>Top Quizzes</h2>
+<div class="quizzes-menu">
+  <a *ngFor="let quiz of quizzes"
+     routerLink="/detail/{{quiz.id}}">
+    {{quiz.name}}
+  </a>
+</div>
+
+<app-quiz-search></app-quiz-search>

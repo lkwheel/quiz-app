@@ -1,0 +1,19 @@
+<h2>My Quizzes</h2>
+
+<div class="form-group">
+  <label for="new-quiz">Quiz name: </label>
+  <input id="new-quiz" class="form-control" aria-describedby="quizName" placeholder="Enter Quiz name" #quizName />
+</div>
+
+<!-- (click) passes input value to add() and then clears the input -->
+<button type="button" class="btn btn-primary" (click)="add(quizName.value); quizName.value=''">
+  Add quiz
+</button>
+
+<div *ngFor="let quiz of quizzes" class="quizzes">
+  <div class="btn-group mr-2" role="group" aria-label="Quiz group">
+    <button type="button" class="btn btn-secondary id">{{quiz.id}}</button>
+    <button type="button" [routerLink]="['/detail/', quiz.id]"
+            class="btn btn-secondary title">{{quiz.name}}</button>
+  </div>
+</div>

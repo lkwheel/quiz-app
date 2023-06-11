@@ -1,0 +1,35 @@
+/* QuizzesComponent's private CSS styles */
+.quizzes {
+  margin: 1em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 35em;
+}
+
+.quizzes button:hover {
+  left: .1em;
+}
+
+.quizzes button.title {
+  color: #333;
+  background-color: #EEE;
+  width: 430px;
+  text-align: left;
+}
+
+.quizzes button.title:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+}
+
+.quizzes button.title:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.quizzes button.id {
+  font-size: small;
+  color: white;
+  background-color: #405061;
+  width: 40px;
+}

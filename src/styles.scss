@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+/* Application-wide Styles */
+$color-h1: #369;
+$font-family-h1: Arial, Helvetica, sans-serif;
+$font-size-h1: 250%;
+
+$color-h2: #444;
+$font-family-h2: Arial, Helvetica, sans-serif;
+$font-weight-h2: lighter;
+
+$color-body: #333;
+$font-family-body: Cambria, Georgia, serif;
+
+$color-button: black;
+$font-size-button: 1rem;
+$padding-button: 1rem;
+$margin-button: 1rem;
+
+.h1 {
+  color: $color-h1;
+  font-family: $font-family-h1;
+  font-size: $font-size-h1;
+}
+
+.h2, .h3 {
+  color: $color-h2;
+  font-family: $font-family-h2;
+  font-weight: $font-weight-h2;
+}
+
+body {
+  margin: 2em;
+  color: $color-body;
+  font-family: $font-family-body;
+}
+
+input[type="text"], button.button {
+  color: $color-body;
+  font-family: $font-family-body;
+}
+
+button.button {
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: $color-button;
+  font-size: $font-size-button;
+  padding: $padding-button;
+  margin: $margin-button;
+}
+
+button.button:hover {
+  background-color: black;
+  color: white;
+}
+
+button.button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}

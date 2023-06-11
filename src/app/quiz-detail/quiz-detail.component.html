@@ -1,0 +1,20 @@
+<div *ngIf="quiz">
+
+  <h2>{{quiz.name | uppercase}} Details</h2>
+  <div class="form-group">
+    <span style="font-weight: bold;">id: </span>{{quiz.id}}
+  </div>
+  <div class="form-group">
+    <label for="quiz-name">Quiz name: </label>
+    <input id="quiz-name"
+           [(ngModel)]="quiz.name"
+           class="form-control"
+           aria-describedby="quizName"
+           placeholder="Enter Quiz name" #quizName />
+  </div>
+  <button type="button" class="btn btn-primary" (click)="goBack()">go back</button>
+  <div *ngFor="let question of quiz.quizQuestions" class="quizzes">
+    <div class="btn-group mr-2" role="group" aria-label="Quiz Question group">
+    </div>
+  </div>
+</div>
